@@ -1,5 +1,7 @@
 /** defines ----------------------------------------------------------------- */
 
+#define DHT_PORT		GPIOC
+#define DHT_PIN			GPIO_PIN_3
 #define HEAT_PORT		GPIOD
 #define HEAT_PIN		GPIO_PIN_4
 #define COOL_PORT		GPIOD

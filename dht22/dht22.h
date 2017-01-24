@@ -6,8 +6,13 @@
 
 /** defines ----------------------------------------------------------------- */
 
-#define DHT_PORT			GPIOC
-#define DHT_PIN				GPIO_PIN_3     // what digital pin we're connected to
+#ifndef DHT_PORT
+	#define DHT_PORT		GPIOC
+#endif /* DHT_PORT */
+
+#ifndef DHT_PIN
+	#define DHT_PIN			GPIO_PIN_3     // what digital pin we're connected to
+#endif /* DHT_PIN */
 
 #define DHT_PACKET_LENGTH	41
 
@@ -26,8 +31,11 @@
 
 #ifndef PRINTF_EN
 	#define PRINTF_EN		1
-	#define PRINTF			if(PRINTF_EN) xprintf
 #endif /* PRINTF_EN */
+
+#ifndef PRINTF
+	#define PRINTF			if(PRINTF_EN) xprintf
+#endif /* PRINTF */
 
 
 /** includes ---------------------------------------------------------------- */
